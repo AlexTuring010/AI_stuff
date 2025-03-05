@@ -46,7 +46,7 @@ Interestingly, some models can be used for both tasks. For example, **logistic r
 
 ---
 
-### 5. Can You Name Four Common Unsupervised Learning Tasks?
+<h3 style="color:red;">5. Can You Name Four Common Unsupervised Learning Tasks?</h3>
 
 In **unsupervised learning**, the training data is **unlabeled**, meaning the system must identify patterns on its own without explicit guidance. Some of the most common unsupervised learning tasks include:
 
