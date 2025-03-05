@@ -197,3 +197,39 @@ Three possible solutions to overfitting are:
 2. **Gather More Training Data**: Increasing the quantity of training data can help the model learn more general patterns and reduce the impact of noise.
 
 3. **Reduce Noise in the Training Data**: Clean the training data by fixing data errors and removing outliers to ensure that the model learns from accurate and relevant information.
+
+---
+
+### 16. What is a test set, and why would you want to use it?
+
+A **test set** is a subset of the data that is used to evaluate the performance of a trained model on new, unseen instances. It provides an estimate of the model's generalization error, which indicates how well the model will perform on new data. Using a test set helps ensure that the model is not overfitting the training data and can generalize well to new cases. This is crucial for understanding how the model will perform in real-world scenarios.
+
+**TIP:** It is common to use 80% of the data for training and hold out 20% for testing. However, for very large datasets, holding out even a small percentage (e.g., 1%) can provide a sufficiently large test set to estimate the generalization error accurately.
+
+---
+
+### 17. What is the purpose of a validation set?
+
+A **validation set** is a subset of the training data used to evaluate and compare different models or hyperparameters during the model selection process. It helps in selecting the best model and tuning hyperparameters without overfitting to the test set. After selecting the best model, it is trained on the full training set, and its performance is evaluated on the test set. The validation set ensures that the model selection and hyperparameter tuning are done in a way that generalizes well to new data.
+
+---
+
+### 18. What is the train-dev set, when do you need it, and how do you use it?
+
+A **train-dev set** is a subset of the training data that is used to evaluate the model during training to detect overfitting. It is useful when the training data is not perfectly representative of the production data.
+
+For example, suppose you want to create a mobile app to take pictures of flowers and automatically determine their species. You can easily download millions of pictures of flowers from the web, but they won't be perfectly representative of the pictures that will actually be taken using the app on a mobile device. Perhaps you only have 1000 representative pictures (i.e., actually taken with the app).
+
+In this case, the most important rule is that both the validation set and the test set must be as representative as possible of the data you expect to use in production. You can shuffle the 1000 representative pictures and put half in the validation set and half in the test set. After training your model on the web pictures, if you observe that the performance of the model on the validation set is disappointing, you will not know whether this is because your model has overfit the training set, or whether this is just due to the mismatch between the web pictures and the mobile app pictures.
+
+One solution is to hold out some of the training pictures (from the web) in yet another set called the train-dev set. After the model is trained (on the training set, not on the train-dev set), you can evaluate it on the train-dev set. If the model performs poorly, then it must have overfit the training set, so you should try to simplify or regularize the model, get more training data, and clean up the training data. But if it performs well on the train-dev set, then you can evaluate the model on the validation set. If it performs poorly, then the problem must be coming from the data mismatch. You can try to tackle this problem by preprocessing the web images to make them look more like the pictures that will be taken by the mobile app, and then retraining the model. Once you have a model that performs well on both the train-dev set and the validation set, you can evaluate it one last time on the test set to know how well it is likely to perform in production.
+
+---
+
+### 19. What can go wrong if you tune hyperparameters using the test set?
+
+If you tune hyperparameters using the test set, you risk overfitting the model to the test set. This means the model may perform well on the test set but poorly on new, unseen data. The test set should only be used for the final evaluation of the model's performance, not for tuning hyperparameters or selecting models.
+
+A common solution to this problem is called **holdout validation**. In holdout validation, you split the training data into a reduced training set and a validation set. You train multiple models with various hyperparameters on the reduced training set and select the model that performs best on the validation set. After this process, you train the best model on the full training set (including the validation set) and evaluate it on the test set to get an estimate of the generalization error.
+
+However, if the validation set is too small, the model evaluations will be imprecise, and you may select a suboptimal model. If the validation set is too large, the remaining training set will be much smaller, which is not ideal for training the final model. To address this, you can use repeated cross-validation, where each model is evaluated on multiple small validation sets, and the evaluations are averaged to get a more accurate measure of performance. The drawback is that this approach increases the training time.
