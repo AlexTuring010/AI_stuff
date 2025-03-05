@@ -202,7 +202,9 @@ Three possible solutions to overfitting are:
 
 ### 16. What is a test set, and why would you want to use it?
 
-A **test set** is a subset of the data that is used to evaluate the performance of a trained model on new, unseen instances. It provides an estimate of the model's generalization error, which indicates how well the model will perform on new data. Using a test set helps ensure that the model is not overfitting the training data and can generalize well to new cases. This is crucial for understanding how the model will perform in real-world scenarios.
+A **test set** is a portion of your data that is kept separate from the training data, used exclusively for evaluating the model’s performance after it has been trained. The purpose of the test set is to estimate how well your model will generalize to unseen data (i.e., data that it has never encountered before).
+
+By testing your model on this separate data, you can estimate its **generalization error** (or out-of-sample error), which reflects how well the model will perform in production. It's important to keep the test set untouched during training to ensure the evaluation is unbiased and accurate.
 
 **TIP:** It is common to use 80% of the data for training and hold out 20% for testing. However, for very large datasets, holding out even a small percentage (e.g., 1%) can provide a sufficiently large test set to estimate the generalization error accurately.
 
