@@ -134,3 +134,40 @@ In contrast, **online learning** allows the system to learn incrementally, adapt
 One challenge with online learning is the risk of performance decline if bad data is fed into the system. This can happen due to bugs or malicious attempts to manipulate the system. To mitigate this risk, it is important to monitor the system closely and be prepared to switch off learning or revert to a previous state if performance drops. Anomaly detection algorithms can also help identify and react to abnormal data inputs.
 
 ---
+
+### 11. What type of algorithm relies on similarity measure to make predictions?
+
+The type of algorithm that relies on a similarity measure to make predictions is called instance-based learning. In instance-based learning, the system learns the examples by heart and then generalizes to new cases by using a similarity measure to compare them to the learned examples (or a subset of them).
+
+For example, a spam filter using instance-based learning would flag emails that are very similar to known spam emails by measuring the similarity between the new email and the known spam emails. A basic similarity measure could be counting the number of words they have in common.
+
+A specific instance-based learning algorithm is the k-nearest neighbors (k-NN) regression, where the prediction for a new instance is made based on the average of the target values of the k-nearest neighbors in the training set. For example, if you want to predict the life satisfaction for Cyprus, you would find the countries with the closest GDP per capita and average their life satisfaction values to make the prediction.
+
+---
+
+### 12. What is the difference between a model parameter and a model hyperparameter?
+
+**Model parameters** are the internal variables of the model that are learned from the training data. These parameters define the model's behavior and are adjusted during the training process to minimize the error and improve the model's performance. For example, in a linear regression model, the parameters are the coefficients (e.g., `w0` and `w1`) that define the linear relationship between the input features and the target variable.
+
+**Model hyperparameters**, on the other hand, are external configurations set before the training process begins. They control the learning process and the structure of the model but are not learned from the training data. Hyperparameters must be set prior to training and remain constant during the training process. Examples of hyperparameters include the learning rate, the number of hidden layers in a neural network, and the regularization strength.
+
+In summary:
+
+- **Model parameters** are learned from the training data and define the model's behavior.
+- **Model hyperparameters** are set before training and control the learning process and model structure.
+
+---
+
+### 13. What do model-based algorithms search for? What is the most common strategy they use to succeed? How do they make predictions?
+
+**Model-based algorithms** search for the optimal parameters that define the model, which best fit the training data. These parameters are adjusted during the training process to minimize the error between the model's predictions and the actual outcomes in the training data.
+
+The most common strategy they use to succeed is to define a performance measure (such as a cost function or utility function) that quantifies how well the model is performing. The goal is to minimize the cost function (or maximize the utility function) by adjusting the model parameters.
+
+**How they make predictions:**
+
+1. **Model Selection:** Choose the type of model and fully specify its architecture. For example, selecting a linear regression model with one input and one output.
+2. **Training the Model:** Use a learning algorithm to find the optimal parameters that minimize the cost function. For example, in linear regression, the algorithm adjusts the coefficients (e.g., `w0` and `w1`) to best fit the training data.
+3. **Making Predictions:** Once the model is trained, it can make predictions on new data by applying the learned parameters to the input features. For example, in a linear regression model, the prediction is made using the equation `life_satisfaction = w0 + w1 * GDP_per_capita`.
+
+In summary, model-based algorithms search for the optimal parameters that minimize the cost function, use this strategy to succeed, and make predictions by applying the learned parameters to new input data.
