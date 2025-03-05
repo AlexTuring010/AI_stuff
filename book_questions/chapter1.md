@@ -9,6 +9,8 @@ There are various types of machine learning systems, such as **supervised vs. un
 
 A machine learning system's performance depends on the **quality and quantity of training data**. If the dataset is too small, unrepresentative, noisy, or contains irrelevant features, the model may struggle ("garbage in, garbage out"). Additionally, the model must strike a balance between **simplicity** (to avoid underfitting) and **complexity** (to avoid overfitting).
 
+---
+
 ### 2. What Are Four Key Applications Where Machine Learning Excels?
 
 Machine learning is particularly effective in the following scenarios:
@@ -17,6 +19,8 @@ Machine learning is particularly effective in the following scenarios:
 2. **Solving Problems with No Clear Traditional Solution** – For complex tasks where conventional methods fail, ML techniques can uncover effective solutions.
 3. **Adapting to Changing Environments** – ML models can be retrained on new data, keeping them up to date in dynamic settings.
 4. **Extracting Insights from Large Datasets** – Machine learning helps uncover patterns and relationships in vast amounts of data that would be difficult for humans to analyze manually.
+
+---
 
 ### 3. What Is a Labeled Training Set?
 
@@ -29,6 +33,8 @@ For example:
 
 Labeled training sets are fundamental to **supervised learning**, where models learn by comparing their predictions to the actual labels and adjusting accordingly.
 
+---
+
 ### 4. What Are the Two Most Common Supervised Learning Tasks?
 
 The two most common supervised learning tasks are **classification** and **regression**.
@@ -37,6 +43,8 @@ The two most common supervised learning tasks are **classification** and **regre
 - **Regression** involves predicting a continuous numerical value. For instance, a model that estimates a **car's price** based on features like mileage, age, and brand is performing a regression task. The system learns by analyzing many examples where both the features and the target values (prices) are provided.
 
 Interestingly, some models can be used for both tasks. For example, **logistic regression**, despite its name, is commonly used for classification because it outputs probabilities (e.g., a 20% chance that an email is spam).
+
+---
 
 ### 5. Can You Name Four Common Unsupervised Learning Tasks?
 
@@ -67,16 +75,6 @@ Using dimensionality reduction before training a machine learning model has seve
 - **Anomaly detection** identifies **unusual or rare occurrences** in data. This is useful for:
   - Detecting fraudulent credit card transactions.
   - Identifying manufacturing defects.
-  - Removing outliers from a dataset before training a model.  
-    Here’s the improved version with the addition:
-
----
-
-#### 3. **Anomaly Detection & Novelty Detection**
-
-- **Anomaly detection** identifies **unusual or rare occurrences** in data. This is useful for:
-  - Detecting fraudulent credit card transactions.
-  - Identifying manufacturing defects.
   - Removing outliers from a dataset before training a model.
 - **Novelty detection** is similar but focuses on identifying **new instances** that are different from everything seen in the training set. This requires a **clean** training set, meaning it should not contain any instances that you want the algorithm to flag as novel.
 
@@ -90,3 +88,5 @@ This method finds **relationships between features** in large datasets. A well-k
 - This insight can help businesses optimize product placement and marketing strategies.
 
 Unsupervised learning techniques are valuable for discovering hidden patterns, simplifying complex data, and making predictions without needing labeled examples.
+
+---
