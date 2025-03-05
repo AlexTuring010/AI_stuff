@@ -1,3 +1,4 @@
+---
 ### 1. How Would You Define Machine Learning?
 
 Machine learning is the process of enabling machines to improve at a given task by learning from data rather than relying on explicitly programmed rules.
@@ -8,7 +9,6 @@ There are various types of machine learning systems, such as **supervised vs. un
 - **Instance-based learning** memorizes training examples and generalizes to new data by comparing it to known instances using a similarity measure.
 
 A machine learning system's performance depends on the **quality and quantity of training data**. If the dataset is too small, unrepresentative, noisy, or contains irrelevant features, the model may struggle ("garbage in, garbage out"). Additionally, the model must strike a balance between **simplicity** (to avoid underfitting) and **complexity** (to avoid overfitting).
-
 ---
 
 ### 2. What Are Four Key Applications Where Machine Learning Excels?
@@ -46,7 +46,7 @@ Interestingly, some models can be used for both tasks. For example, **logistic r
 
 ---
 
-<h3 style="color:red;">5. Can You Name Four Common Unsupervised Learning Tasks?</h3>
+### 5. Can You Name Four Common Unsupervised Learning Tasks?
 
 In **unsupervised learning**, the training data is **unlabeled**, meaning the system must identify patterns on its own without explicit guidance. Some of the most common unsupervised learning tasks include:
 
@@ -88,5 +88,49 @@ This method finds **relationships between features** in large datasets. A well-k
 - This insight can help businesses optimize product placement and marketing strategies.
 
 Unsupervised learning techniques are valuable for discovering hidden patterns, simplifying complex data, and making predictions without needing labeled examples.
+
+---
+
+### 6. What Type of Algorithm Would You Use to Allow a Robot to Walk in Various Unknown Terrains?
+
+To enable a robot to walk in unknown terrains, I would use **reinforcement learning**. This type of algorithm allows the robot, known as the **agent**, to learn through trial and error. The robot can observe its environment, choose actions (like stepping in different directions), and receive feedback in the form of **rewards** (for success) or **penalties** (for failure).
+
+Through this process, the robot learns a strategy, known as a **policy**, that helps it maximize rewards over time. Essentially, the policy guides the robot in deciding the best actions to take based on its current situation, even in unfamiliar environments. For example, many robots use reinforcement learning to improve their walking ability by continuously adjusting their movements to adapt to new terrains.
+
+---
+
+### 7. What Type of Algorithm Would You Use to Segment Your Customers into Multiple Groups?
+
+To segment customers into multiple groups, you would use a **clustering algorithm**, which falls under the category of **unsupervised learning**. In clustering, the algorithm groups similar customers together based on shared characteristics, such as purchasing behavior, demographics, or preferences, without requiring pre-labeled data.
+
+For example, if you have data on customer age, income, and buying habits, a clustering algorithm could identify natural groupings within this data—like one group of high-income, frequent buyers and another of budget-conscious, occasional buyers. This segmentation helps you target different customer groups with tailored marketing strategies, improving customer engagement and satisfaction.
+
+---
+
+### 8. Would You Frame the Problem of Spam Detection as a Supervised Learning Problem or an Unsupervised Learning Problem?
+
+Spam detection is typically framed as a **supervised learning** problem because it uses a **labeled training set** with emails marked as "spam" or "ham." The model learns from these labeled examples to classify new emails.
+
+While **unsupervised learning** techniques, like clustering, could group similar emails together, **supervised learning** is generally more effective for spam detection since the goal is to classify emails into specific categories.
+
+---
+
+### 9. What is an Online Learning System?
+
+An **online learning system** is a type of machine learning system that is trained incrementally by feeding it data instances sequentially, either individually or in small groups called mini-batches. Each learning step is fast and cheap, allowing the system to learn about new data on the fly, as it arrives. This approach is useful for systems that need to adapt to changes extremely rapidly, such as detecting new patterns in the stock market, or for situations where computing resources are limited, such as training a model on a mobile device.
+
+### 10. What is Out-of-Core Learning?
+
+**Out-of-core learning** refers to training machine learning models on datasets that are too large to fit into a single machine's main memory. The algorithm loads a part of the data, runs a training step on that data, and repeats the process until it has processed all the data. This approach is typically done offline and is useful for handling huge datasets efficiently.
+
+### Additional Context
+
+In **batch learning**, the system is trained using all available data at once, which can be time-consuming and resource-intensive. This is typically done offline, and the model is then deployed without further learning. However, the model's performance may degrade over time due to changes in the data, a phenomenon known as model rot or data drift. To address this, the model needs to be retrained regularly on up-to-date data.
+
+In contrast, **online learning** allows the system to learn incrementally, adapting to new data as it arrives. This is particularly useful for applications that require rapid adaptation to changing data or have limited computing resources. However, online learning systems must carefully manage the learning rate to balance between quickly adapting to new data and retaining knowledge of old data.
+
+**Out-of-core learning** is another approach for handling large datasets that cannot fit into memory. It processes the data in chunks, making it possible to train models on massive datasets efficiently.
+
+One challenge with online learning is the risk of performance decline if bad data is fed into the system. This can happen due to bugs or malicious attempts to manipulate the system. To mitigate this risk, it is important to monitor the system closely and be prepared to switch off learning or revert to a previous state if performance drops. Anomaly detection algorithms can also help identify and react to abnormal data inputs.
 
 ---
