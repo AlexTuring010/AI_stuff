@@ -171,3 +171,29 @@ The most common strategy they use to succeed is to define a performance measure 
 3. **Making Predictions:** Once the model is trained, it can make predictions on new data by applying the learned parameters to the input features. For example, in a linear regression model, the prediction is made using the equation `life_satisfaction = w0 + w1 * GDP_per_capita`.
 
 In summary, model-based algorithms search for the optimal parameters that minimize the cost function, use this strategy to succeed, and make predictions by applying the learned parameters to new input data.
+
+---
+
+### 14. Can you name four of the main challenges in machine learning?
+
+1. **Insufficient Quantity of Training Data**: Machine learning algorithms require a large amount of data to perform well. Simple problems may need thousands of examples, while complex problems like image or speech recognition may need millions.
+
+2. **Nonrepresentative Training Data**: The training data must be representative of the new cases the model will generalize to. Nonrepresentative data can lead to inaccurate predictions, especially if the sample is too small or the sampling method is flawed.
+
+3. **Poor-Quality Data**: Errors, outliers, and noise in the training data can make it difficult for the system to detect underlying patterns, reducing its performance. Cleaning up the data is often necessary for better results.
+
+4. **Irrelevant Features**: The training data must contain relevant features and not too many irrelevant ones. Feature engineering, which includes feature selection, feature extraction, and creating new features, is crucial for the success of a machine learning project.
+
+---
+
+### 15. If your model performs great on the training data but generalizes poorly to new instances, what is happening? Can you name three possible solutions?
+
+If your model performs great on the training data but generalizes poorly to new instances, it is experiencing **overfitting**. Overfitting occurs when the model is too complex relative to the amount and noisiness of the training data, causing it to detect patterns in the noise that do not generalize to new data.
+
+Three possible solutions to overfitting are:
+
+1. **Simplify the Model**: Select a model with fewer parameters (e.g., a linear model instead of a high-degree polynomial model), reduce the number of attributes in the training data, or apply constraints to the model.
+
+2. **Gather More Training Data**: Increasing the quantity of training data can help the model learn more general patterns and reduce the impact of noise.
+
+3. **Reduce Noise in the Training Data**: Clean the training data by fixing data errors and removing outliers to ensure that the model learns from accurate and relevant information.
