@@ -9,6 +9,8 @@ There are various types of machine learning systems, such as **supervised vs. un
 
 A machine learning system's performance depends on the **quality and quantity of training data**. If the dataset is too small, unrepresentative, noisy, or contains irrelevant features, the model may struggle ("garbage in, garbage out"). Additionally, the model must strike a balance between **simplicity** (to avoid underfitting) and **complexity** (to avoid overfitting).
 
+---
+
 ### 2. What Are Four Key Applications Where Machine Learning Excels?
 
 Machine learning is particularly effective in the following scenarios:
