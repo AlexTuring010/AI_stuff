@@ -212,7 +212,9 @@ By testing your model on this separate data, you can estimate its **generalizati
 
 ### 17. What is the purpose of a validation set?
 
-A **validation set** is a subset of the training data used to evaluate and compare different models or hyperparameters during the model selection process. It helps in selecting the best model and tuning hyperparameters without overfitting to the test set. After selecting the best model, it is trained on the full training set, and its performance is evaluated on the test set. The validation set ensures that the model selection and hyperparameter tuning are done in a way that generalizes well to new data.
+The **validation set** (or **dev set**) is a subset of the data that is used to evaluate different models during the training process. The purpose of the validation set is to help in model selection and hyperparameter tuning.
+
+When you have multiple candidate models (e.g., different types of models or models with different hyperparameters), you can train them on the training set and evaluate them on the validation set to choose the best-performing one. Once you’ve selected the best model, you can train it on the entire training set (including the validation set) before testing it on the test set to get an estimate of its generalization error.
 
 ---
 
