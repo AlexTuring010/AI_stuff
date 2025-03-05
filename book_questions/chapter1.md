@@ -1,4 +1,3 @@
----
 ### 1. How Would You Define Machine Learning?
 
 Machine learning is the process of enabling machines to improve at a given task by learning from data rather than relying on explicitly programmed rules.
@@ -8,8 +7,7 @@ There are various types of machine learning systems, such as **supervised vs. un
 - **Model-based learning** involves adjusting parameters within a model to fit the training data, allowing it to make accurate predictions on both the training set and new data.
 - **Instance-based learning** memorizes training examples and generalizes to new data by comparing it to known instances using a similarity measure.
 
-A machine learning system's performance depends on the **quality and quantity of training data**. If the dataset is too small, unrepresentative, noisy, or contains irrelevant features, the model may struggle ("garbage in, garbage out"). Additionally, the model must strike a balance between **simplicity** (to avoid underfitting) and **complexity** (to avoid overfitting).
----
+## A machine learning system's performance depends on the **quality and quantity of training data**. If the dataset is too small, unrepresentative, noisy, or contains irrelevant features, the model may struggle ("garbage in, garbage out"). Additionally, the model must strike a balance between **simplicity** (to avoid underfitting) and **complexity** (to avoid overfitting).
 
 ### 2. What Are Four Key Applications Where Machine Learning Excels?
 
