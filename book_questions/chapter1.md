@@ -125,13 +125,13 @@ An **online learning system** is a type of machine learning system that is train
 
 ### Additional Context
 
-In **batch learning**, the system is trained using all available data at once, which can be time-consuming and resource-intensive. This is typically done offline, and the model is then deployed without further learning. However, the model's performance may degrade over time due to changes in the data, a phenomenon known as model rot or data drift. To address this, the model needs to be retrained regularly on up-to-date data.
+In **batch learning**, the system is trained using all available data at once, which can be time-consuming and resource-intensive. This is typically done offline, and the model is then deployed without further learning. However, over time, the model’s performance may degrade due to changes in the data, a phenomenon known as model rot or data drift. To maintain accuracy, the model needs to be retrained regularly using up-to-date data.
 
-In contrast, **online learning** allows the system to learn incrementally, adapting to new data as it arrives. This is particularly useful for applications that require rapid adaptation to changing data or have limited computing resources. However, online learning systems must carefully manage the learning rate to balance between quickly adapting to new data and retaining knowledge of old data.
+In contrast, **online learning** allows the system to learn incrementally, adapting to new data as it arrives. This is particularly useful for applications requiring rapid adaptation to changing data or operating under limited computing resources. A key factor in online learning is the **learning rate**, which determines how quickly the model updates in response to new information. A high learning rate allows for rapid adaptation but may cause instability, while a low learning rate ensures stability but may slow down learning. Striking the right balance is crucial for maintaining model performance over time.
 
-**Out-of-core learning** is another approach for handling large datasets that cannot fit into memory. It processes the data in chunks, making it possible to train models on massive datasets efficiently.
+**Out-of-core learning** is another approach for handling large datasets that cannot fit into memory. By processing data in chunks, it enables efficient training on massive datasets without requiring extensive memory resources.
 
-One challenge with online learning is the risk of performance decline if bad data is fed into the system. This can happen due to bugs or malicious attempts to manipulate the system. To mitigate this risk, it is important to monitor the system closely and be prepared to switch off learning or revert to a previous state if performance drops. Anomaly detection algorithms can also help identify and react to abnormal data inputs.
+One challenge with online learning is the risk of performance decline if poor-quality data is introduced. This could occur due to bugs or even malicious attempts to manipulate the system. To mitigate this risk, it is important to monitor the system closely and be prepared to halt learning or revert to a previous model state if performance drops. Anomaly detection algorithms can also help identify and respond to abnormal data inputs, ensuring the system remains reliable and robust.
 
 ---
 
