@@ -162,7 +162,7 @@ In summary:
 
 **Model-based algorithms** search for the optimal parameters that define the model, which best fit the training data. These parameters are adjusted during the training process to minimize the error between the model's predictions and the actual outcomes in the training data.
 
-The most common strategy they use to succeed is to define a performance measure (such as a cost function or utility function) that quantifies how well the model is performing. The goal is to minimize the cost function (or maximize the utility function) by adjusting the model parameters.
+The most common strategy they use to succeed is to define a performance measure (such as a **cost function** or **utility function**) that quantifies how well the model is performing. The goal is to minimize the cost function (or maximize the utility function) by adjusting the model parameters. However, using a simple cost or utility function may not always be the best approach. In some cases, certain types of errors have more severe consequences than others. For example, in a spam detection model, mistakenly classifying a spam email as not spam is usually a minor inconvenience. However, incorrectly flagging an important email as spam can be much more problematic, as the user may not realize for weeks that a critical message was lost. In such cases, the cost function should be designed to account for the varying impact of different types of errors.
 
 **How they make predictions:**
 
