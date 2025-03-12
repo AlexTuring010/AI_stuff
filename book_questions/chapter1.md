@@ -141,7 +141,7 @@ The type of algorithm that relies on a similarity measure to make predictions is
 
 For example, a spam filter using instance-based learning would flag emails that are very similar to known spam emails by measuring the similarity between the new email and the known spam emails. A basic similarity measure could be counting the number of words they have in common.
 
-A specific instance-based learning algorithm is the **k-nearest neighbors (k-NN) regression**, where the prediction for a new instance is made based on the average of the target values of the k-nearest neighbors in the training set. For example, if you want to predict the life satisfaction for Cyprus, you would find the countries with the closest GDP per capita and average their life satisfaction values to make the prediction.
+A specific instance-based learning algorithm is the **k-nearest neighbors (k-N) regression**, where the prediction for a new instance is made based on the average of the target values of the k-nearest neighbors in the training set. For example, if you want to predict the life satisfaction for Cyprus, you would find the countries with the closest GDP per capita and average their life satisfaction values to make the prediction.
 
 ---
 
